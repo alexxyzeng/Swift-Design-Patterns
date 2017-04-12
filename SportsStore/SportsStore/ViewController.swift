@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var totalStockLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    var productStore = ProductDataStore()
 	
 	var products = [Product(name: "Kayak", description: "A boat for one person", category: "Watersports", price: 275.0, stockLevel: 10),
 	                Product(name: "Lifejacket", description: "Protective and fashionable", category: "Watersports", price: 48.95, stockLevel: 14),
@@ -35,6 +35,17 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		productStore.callback = { (p: Product) in
+			for cell in self.tableView.visibleCells {
+				if let pcell = cell as? ProductTableCell {
+					if pcell.product?.name == p.name {
+						pcell.stockStepper.value = Double(p.stockLevel)
+						pcell.stockField.text = String(p.stockLevel)
+					}
+				}
+			}
+		}
         displayStockTotal();
     }
 
@@ -44,12 +55,13 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
-        return products.count;
+        return productStore.products.count;
     }
     
     func tableView(_ tableView: UITableView,
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let product = products[indexPath.row];
+//        let product = products[indexPath.row];
+		let product = productStore.products[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductTableCell
         cell.product = product
         cell.nameLabel.text = product.name;
@@ -92,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         totalStockLabel.text = "\(stockTotal) Products in Stock";
 		
-		let finalTotals: (Int, Double) = products.reduce((0, 0.0)) { (totals, product) -> (Int, Double) in
+		let finalTotals: (Int, Double) = productStore.products.reduce((0, 0.0)) { (totals, product) -> (Int, Double) in
 			return (
 				totals.0 + product.stockLevel,
 				totals.1 + product.stockValue
