@@ -17,7 +17,9 @@ class Product: NSObject, NSCopying {
 	private var stockLevelBackingValue: Int = 0
 	private var priceBackingValue: Double = 0
 	
-	init(name: String, description: String, category: String, price: Double, stockLevel: Int) {
+	var salesTaxRate: Double = 0.2
+	
+	required init(name: String, description: String, category: String, price: Double, stockLevel: Int) {
 		self.name = name
 		self.productDescription = description
 		self.category = category
@@ -26,6 +28,21 @@ class Product: NSObject, NSCopying {
 		self.price = price
 		self.stockLevel = stockLevel
 	}
+	
+	class func createProduct(name: String, description: String, category: String, price: Double, stockLevel: Int) -> Product {
+		var productType: Product.Type
+		switch category {
+		case "Watersports":
+			productType = WatersportsProduct.self
+		case "Soccer":
+			productType = SoccerProduct.self
+		default:
+			productType = Product.self
+		}
+		
+		return productType.init(name: name, description: description, category: category, price: price, stockLevel: stockLevel)
+	}
+	
 	//  对外公开的属性
 	var stockLevel: Int {
 		get {
@@ -48,11 +65,46 @@ class Product: NSObject, NSCopying {
 	//  calculated property
 	var stockValue: Double {
 		get {
-			return price * Double(stockLevel)
+//			return price * Double(stockLevel)
+			return (price * (1 + salesTaxRate)) * Double(stockLevel)
 		}
 	}
 	
 	func copy(with zone: NSZone? = nil) -> Any {
 		return Product(name: name, description: productDescription, category: category, price: price, stockLevel: stockLevel)
+	}
+	
+	var upsells: [UpsellOpportunities] {
+		get {
+			return Array()
+		}
+	}
+}
+
+enum UpsellOpportunities {
+	case SwimmingLessions
+	case MapOfLakes
+	case SoccerVideos
+}
+
+class WatersportsProduct: Product {
+	required init(name: String, description: String, category: String, price: Double, stockLevel: Int) {
+		super.init(name: name, description: description, category: category, price: price, stockLevel: stockLevel)
+		salesTaxRate = 0.10
+	}
+	
+	override var upsells: [UpsellOpportunities] {
+		return [UpsellOpportunities.SwimmingLessions, UpsellOpportunities.MapOfLakes]
+	}
+}
+
+class SoccerProduct: Product {
+	required init(name: String, description: String, category: String, price: Double, stockLevel: Int) {
+		super.init(name: name, description: description, category: category, price: price, stockLevel: stockLevel)
+		salesTaxRate = 0.25
+	}
+	
+	override var upsells: [UpsellOpportunities] {
+		return [UpsellOpportunities.SoccerVideos]
 	}
 }
