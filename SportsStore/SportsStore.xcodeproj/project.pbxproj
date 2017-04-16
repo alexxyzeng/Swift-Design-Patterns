@@ -14,6 +14,8 @@
 		6636F78519F65D24002DE278 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6636F78319F65D24002DE278 /* LaunchScreen.xib */; };
 		6636F79119F65D24002DE278 /* SportsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636F79019F65D24002DE278 /* SportsStoreTests.swift */; };
 		CE21C4331EA393FB001225D0 /* Euro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4321EA393FB001225D0 /* Euro.swift */; };
+		CE21C4351EA3A2D2001225D0 /* StockvalueImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */; };
+		CE21C4371EA3A438001225D0 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4361EA3A438001225D0 /* StockValueFactories.swift */; };
 		CE5D816A1EA1E98F007146DE /* ChangeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D81691EA1E98F007146DE /* ChangeRecord.swift */; };
 		CE99AB5B1E9B865A001F563B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB5A1E9B865A001F563B /* Logger.swift */; };
 		CEA3A81F1E1BFC9A009221F3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A81E1E1BFC9A009221F3 /* Utils.swift */; };
@@ -45,6 +47,8 @@
 		6636F78F19F65D24002DE278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6636F79019F65D24002DE278 /* SportsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsStoreTests.swift; sourceTree = "<group>"; };
 		CE21C4321EA393FB001225D0 /* Euro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euro.swift; sourceTree = "<group>"; };
+		CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockvalueImplementations.swift; sourceTree = "<group>"; };
+		CE21C4361EA3A438001225D0 /* StockValueFactories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
 		CE5D81691EA1E98F007146DE /* ChangeRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeRecord.swift; sourceTree = "<group>"; };
 		CE99AB5A1E9B865A001F563B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CEA3A81E1E1BFC9A009221F3 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				CE5D81691EA1E98F007146DE /* ChangeRecord.swift */,
 				CEBD37671E9E25CE000776D9 /* ProductDataStore.swift */,
 				CE21C4321EA393FB001225D0 /* Euro.swift */,
+				CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */,
+				CE21C4361EA3A438001225D0 /* StockValueFactories.swift */,
 				CEA3A81E1E1BFC9A009221F3 /* Utils.swift */,
 				CEA3A8201E1BFD78009221F3 /* Product.swift */,
 				CE99AB5A1E9B865A001F563B /* Logger.swift */,
@@ -244,9 +250,11 @@
 				6636F77D19F65D24002DE278 /* ViewController.swift in Sources */,
 				CEBD37641E9E22A9000776D9 /* NetworkConnection.swift in Sources */,
 				CE21C4331EA393FB001225D0 /* Euro.swift in Sources */,
+				CE21C4351EA3A2D2001225D0 /* StockvalueImplementations.swift in Sources */,
 				CE5D816A1EA1E98F007146DE /* ChangeRecord.swift in Sources */,
 				CEA3A8211E1BFD78009221F3 /* Product.swift in Sources */,
 				6636F77B19F65D24002DE278 /* AppDelegate.swift in Sources */,
+				CE21C4371EA3A438001225D0 /* StockValueFactories.swift in Sources */,
 				CEA3A81F1E1BFC9A009221F3 /* Utils.swift in Sources */,
 				CEBD37661E9E23D1000776D9 /* NetworkPool.swift in Sources */,
 			);
