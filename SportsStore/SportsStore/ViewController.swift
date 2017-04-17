@@ -36,18 +36,32 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		productStore.callback = { (p: Product) in
-			for cell in self.tableView.visibleCells {
-				if let pcell = cell as? ProductTableCell {
-					if pcell.product?.name == p.name {
-						pcell.stockStepper.value = Double(p.stockLevel)
-						pcell.stockField.text = String(p.stockLevel)
-					}
-				}
+//		productStore.callback = { (p: Product) in
+//			for cell in self.tableView.visibleCells {
+//				if let pcell = cell as? ProductTableCell {
+//					if pcell.product?.name == p.name {
+//						pcell.stockStepper.value = Double(p.stockLevel)
+//						pcell.stockField.text = String(p.stockLevel)
+//					}
+//				}
+//			}
+//		}
+        displayStockTotal();
+		
+		let bridge = EventBridge(callback: updateStockLevel)
+		productStore.callback = bridge.inputCallback
+    }
+	
+	func updateStockLevel(name: String, level: Int) {
+		for cell in self.tableView.visibleCells {
+			if  let pcell = cell as? ProductTableCell {
+				pcell.stockStepper.value = Double(level)
+				pcell.stockField.text = String(level)
 			}
 		}
-        displayStockTotal();
-    }
+		
+		displayStockTotal()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

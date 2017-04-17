@@ -16,6 +16,7 @@
 		CE21C4331EA393FB001225D0 /* Euro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4321EA393FB001225D0 /* Euro.swift */; };
 		CE21C4351EA3A2D2001225D0 /* StockvalueImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */; };
 		CE21C4371EA3A438001225D0 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4361EA3A438001225D0 /* StockValueFactories.swift */; };
+		CE2DD1A21EA4CD940066F3D8 /* EventBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DD1A11EA4CD940066F3D8 /* EventBridge.swift */; };
 		CE5D816A1EA1E98F007146DE /* ChangeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D81691EA1E98F007146DE /* ChangeRecord.swift */; };
 		CE99AB5B1E9B865A001F563B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99AB5A1E9B865A001F563B /* Logger.swift */; };
 		CEA3A81F1E1BFC9A009221F3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A81E1E1BFC9A009221F3 /* Utils.swift */; };
@@ -49,6 +50,7 @@
 		CE21C4321EA393FB001225D0 /* Euro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euro.swift; sourceTree = "<group>"; };
 		CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockvalueImplementations.swift; sourceTree = "<group>"; };
 		CE21C4361EA3A438001225D0 /* StockValueFactories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
+		CE2DD1A11EA4CD940066F3D8 /* EventBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBridge.swift; sourceTree = "<group>"; };
 		CE5D81691EA1E98F007146DE /* ChangeRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeRecord.swift; sourceTree = "<group>"; };
 		CE99AB5A1E9B865A001F563B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CEA3A81E1E1BFC9A009221F3 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CE21C4321EA393FB001225D0 /* Euro.swift */,
 				CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */,
 				CE21C4361EA3A438001225D0 /* StockValueFactories.swift */,
+				CE2DD1A11EA4CD940066F3D8 /* EventBridge.swift */,
 				CEA3A81E1E1BFC9A009221F3 /* Utils.swift */,
 				CEA3A8201E1BFD78009221F3 /* Product.swift */,
 				CE99AB5A1E9B865A001F563B /* Logger.swift */,
@@ -254,6 +257,7 @@
 				CE5D816A1EA1E98F007146DE /* ChangeRecord.swift in Sources */,
 				CEA3A8211E1BFD78009221F3 /* Product.swift in Sources */,
 				6636F77B19F65D24002DE278 /* AppDelegate.swift in Sources */,
+				CE2DD1A21EA4CD940066F3D8 /* EventBridge.swift in Sources */,
 				CE21C4371EA3A438001225D0 /* StockValueFactories.swift in Sources */,
 				CEA3A81F1E1BFC9A009221F3 /* Utils.swift in Sources */,
 				CEBD37661E9E23D1000776D9 /* NetworkPool.swift in Sources */,
