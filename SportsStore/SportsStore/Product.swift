@@ -108,3 +108,28 @@ class SoccerProduct: Product {
 		return [UpsellOpportunities.SoccerVideos]
 	}
 }
+
+
+class ProductComposite: Product {
+	private let products: [Product]
+	
+	required init(name: String, description: String, category: String, price: Double, stockLevel: Int) {
+		fatalError("Not implemented")
+	}
+	
+	init(name: String, description: String, category: String, stockLevel: Int, products: Product...) {
+		self.products = products
+		super.init(name: name, description: description, category: category, price: 0, stockLevel: stockLevel)
+	}
+	
+	override var price: Double {
+		get {
+			return products.reduce(0, {
+				return $0 + $1.price
+			})
+		}
+//		set {
+//			
+//		}
+	}
+}

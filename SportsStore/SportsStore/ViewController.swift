@@ -125,9 +125,11 @@ class ViewController: UIViewController, UITableViewDataSource {
 			)
 		}
 		
-		var factory = StockTotalFactory.getFactory(curr: .GBP)
-		var totalAmount = factory.converter?.convertTotal(total: finalTotals.1)
-		var formatted = factory.formatter?.formatTotal(total: totalAmount!)
+//		var factory = StockTotalFactory.getFactory(curr: .GBP)
+//		var totalAmount = factory.converter?.convertTotal(total: finalTotals.1)
+//		var formatted = factory.formatter?.formatTotal(total: totalAmount!)
+		//  通过外观模式，将这三行代码整合在一起
+		let formatted = StockTotalFacade.formatCurrencyFormat(amount: finalTotals.1, currency: .EUR)
 		
 		totalStockLabel.text = "\(finalTotals.0) Products in Stock." + "Total Value: \(formatted!))"
     }

@@ -38,13 +38,29 @@ final class ProductDataStore {
 					}
 					NetworkPool.returnConnection(conn: stockConn)
 				}
-				products.append(p)
 			}
+			products.append(p)
 		}
 		return products
 	}
 	
 	private var productData:[Product] = [
+		ProductComposite(name: "Running Pack",
+		                 description: "Complete Running Outfit", category: "Running",
+		                 stockLevel: 10, products:
+			Product.createProduct(name: "Shirt", description: "Running Shirt",
+				  category: "Running", price: 42, stockLevel: 10),
+			 Product.createProduct(name: "Shorts", description: "Running Shorts",
+				   category: "Running", price: 30, stockLevel: 10),
+			 Product.createProduct(name: "Shoes", description: "Running Shoes",
+				   category: "Running", price: 120, stockLevel: 10),
+			 ProductComposite(name: "Headgear", description: "Hat, etc",
+				  category: "Running", stockLevel: 10, products:
+					Product.createProduct(name: "Hat", description: "Running Hat",
+							                      category: "Running", price: 10, stockLevel: 10),
+		                                  Product.createProduct(name: "Sunglasses", description: "Glasses",
+		                                                        category: "Running", price: 10, stockLevel: 10))
+		),
 		Product.createProduct(name:"Kayak", description:"A boat for one person",
 		        category:"Watersports", price:275.0, stockLevel:0),
 		Product.createProduct(name:"Lifejacket", description:"Protective and fashionable",

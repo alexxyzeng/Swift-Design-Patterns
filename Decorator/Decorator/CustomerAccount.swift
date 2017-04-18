@@ -24,7 +24,6 @@ class CustomerAccount {
     func formatCurrencyString(_ number:Float) -> String {
         let formatter = NumberFormatter();
         formatter.numberStyle = NumberFormatter.Style.currency;
-//        return formatter.string(from: NSNumber(number)) ?? "";
 		return formatter.string(from: NSNumber(value: number)) ?? ""
     }
 }

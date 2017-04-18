@@ -19,6 +19,8 @@ class PriceDecorator: Product {
 		self.wrappedProduct = product
 		super.init(name: product.name, description: product.description, category: product.description, price: product.price, stockLevel: product.stockLevel)
 	}
+	
+	
 }
 
 class LowStockIncreaseDecorator: PriceDecorator {
