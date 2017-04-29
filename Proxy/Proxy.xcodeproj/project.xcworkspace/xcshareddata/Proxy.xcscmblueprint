@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FE10996E635C652283880E956F811D99EA277D8C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FE10996E635C652283880E956F811D99EA277D8C" : 9223372036854775807,
+    "7D0899A24046D758B26C8D2A842E0EFAE6651E17" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "89EBE703-84DA-4B15-8C87-F513FFEA0590",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FE10996E635C652283880E956F811D99EA277D8C" : "Swift-Design-Patterns\/",
+    "7D0899A24046D758B26C8D2A842E0EFAE6651E17" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Proxy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Proxy\/Proxy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xiayao\/github.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7D0899A24046D758B26C8D2A842E0EFAE6651E17"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xiayao\/Swift-Design-Patterns.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FE10996E635C652283880E956F811D99EA277D8C"
+    }
+  ]
+}
