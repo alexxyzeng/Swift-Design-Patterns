@@ -8,23 +8,19 @@
 
 import Foundation
 
-func getHeader(header: String) {
-    let url = URL(string: "http://www.apress.com")
-    let request = URLRequest(url: url!)
-    URLSession.shared.dataTask(with: request) { (data, response, error) in
-        print(header)
-        if let httpResponse = response as? HTTPURLResponse {
-            if let headerValue = httpResponse.allHeaderFields[header] as? String {
-                print("\(header): \(headerValue)")
-            }
-        }
-    }
+let url = "http://www.apress.com"
+let headers = ["Content-Type", "Content-Encoding"]
+
+let proxy = AccessControlProxy(url: url)
+
+for header in headers {
+	proxy.getHeader(header: header, callback: { (header, value) in
+		print(("\(header): \(value!)"))
+	})
 }
 
-let headers = ["Content-length", "Content-Encoding"]
-for header in headers {
-    getHeader(header: header)
-}
+UserAuthentication.sharedInstance.authenticate(user: "Bob", pass: "secret")
+proxy.execute()
 
 let _ = FileHandle.standardInput.availableData
 

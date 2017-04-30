@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06FEFD681EB373B4008DF68C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FEFD671EB373B4008DF68C /* main.swift */; };
-		06FEFD6F1EB40E96008DF68C /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FEFD6E1EB40E96008DF68C /* Proxy.swift */; };
-		CE0273C91EB5D48C00781825 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0273C81EB5D48C00781825 /* Auth.swift */; };
+		CE0273D71EB5D7B200781825 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0273D61EB5D7B200781825 /* main.swift */; };
+		CE0273DE1EB5D7BD00781825 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0273DD1EB5D7BD00781825 /* NetworkRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		06FEFD621EB373B4008DF68C /* CopyFiles */ = {
+		CE0273D11EB5D7B200781825 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,14 +24,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06FEFD641EB373B4008DF68C /* Proxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proxy; sourceTree = BUILT_PRODUCTS_DIR; };
-		06FEFD671EB373B4008DF68C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		06FEFD6E1EB40E96008DF68C /* Proxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
-		CE0273C81EB5D48C00781825 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		CE0273D31EB5D7B200781825 /* ReferenceCounting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReferenceCounting; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0273D61EB5D7B200781825 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CE0273DD1EB5D7BD00781825 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06FEFD611EB373B4008DF68C /* Frameworks */ = {
+		CE0273D01EB5D7B200781825 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,105 +40,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06FEFD5B1EB373B4008DF68C = {
+		CE0273CA1EB5D7B200781825 = {
 			isa = PBXGroup;
 			children = (
-				06FEFD661EB373B4008DF68C /* Proxy */,
-				06FEFD651EB373B4008DF68C /* Products */,
+				CE0273D51EB5D7B200781825 /* ReferenceCounting */,
+				CE0273D41EB5D7B200781825 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		06FEFD651EB373B4008DF68C /* Products */ = {
+		CE0273D41EB5D7B200781825 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06FEFD641EB373B4008DF68C /* Proxy */,
+				CE0273D31EB5D7B200781825 /* ReferenceCounting */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06FEFD661EB373B4008DF68C /* Proxy */ = {
+		CE0273D51EB5D7B200781825 /* ReferenceCounting */ = {
 			isa = PBXGroup;
 			children = (
-				06FEFD671EB373B4008DF68C /* main.swift */,
-				CE0273C81EB5D48C00781825 /* Auth.swift */,
-				06FEFD6E1EB40E96008DF68C /* Proxy.swift */,
+				CE0273D61EB5D7B200781825 /* main.swift */,
+				CE0273DD1EB5D7BD00781825 /* NetworkRequest.swift */,
 			);
-			path = Proxy;
+			path = ReferenceCounting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		06FEFD631EB373B4008DF68C /* Proxy */ = {
+		CE0273D21EB5D7B200781825 /* ReferenceCounting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06FEFD6B1EB373B4008DF68C /* Build configuration list for PBXNativeTarget "Proxy" */;
+			buildConfigurationList = CE0273DA1EB5D7B200781825 /* Build configuration list for PBXNativeTarget "ReferenceCounting" */;
 			buildPhases = (
-				06FEFD601EB373B4008DF68C /* Sources */,
-				06FEFD611EB373B4008DF68C /* Frameworks */,
-				06FEFD621EB373B4008DF68C /* CopyFiles */,
+				CE0273CF1EB5D7B200781825 /* Sources */,
+				CE0273D01EB5D7B200781825 /* Frameworks */,
+				CE0273D11EB5D7B200781825 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Proxy;
-			productName = Proxy;
-			productReference = 06FEFD641EB373B4008DF68C /* Proxy */;
+			name = ReferenceCounting;
+			productName = ReferenceCounting;
+			productReference = CE0273D31EB5D7B200781825 /* ReferenceCounting */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		06FEFD5C1EB373B4008DF68C /* Project object */ = {
+		CE0273CB1EB5D7B200781825 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = xiayao;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = User;
 				TargetAttributes = {
-					06FEFD631EB373B4008DF68C = {
-						CreatedOnToolsVersion = 8.2.1;
+					CE0273D21EB5D7B200781825 = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 9F3FQNZGD3;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 06FEFD5F1EB373B4008DF68C /* Build configuration list for PBXProject "Proxy" */;
+			buildConfigurationList = CE0273CE1EB5D7B200781825 /* Build configuration list for PBXProject "ReferenceCounting" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 06FEFD5B1EB373B4008DF68C;
-			productRefGroup = 06FEFD651EB373B4008DF68C /* Products */;
+			mainGroup = CE0273CA1EB5D7B200781825;
+			productRefGroup = CE0273D41EB5D7B200781825 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				06FEFD631EB373B4008DF68C /* Proxy */,
+				CE0273D21EB5D7B200781825 /* ReferenceCounting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		06FEFD601EB373B4008DF68C /* Sources */ = {
+		CE0273CF1EB5D7B200781825 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06FEFD6F1EB40E96008DF68C /* Proxy.swift in Sources */,
-				06FEFD681EB373B4008DF68C /* main.swift in Sources */,
-				CE0273C91EB5D48C00781825 /* Auth.swift in Sources */,
+				CE0273DE1EB5D7BD00781825 /* NetworkRequest.swift in Sources */,
+				CE0273D71EB5D7B200781825 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		06FEFD691EB373B4008DF68C /* Debug */ = {
+		CE0273D81EB5D7B200781825 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -176,7 +173,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -184,11 +181,12 @@
 			};
 			name = Debug;
 		};
-		06FEFD6A1EB373B4008DF68C /* Release */ = {
+		CE0273D91EB5D7B200781825 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -218,13 +216,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		06FEFD6C1EB373B4008DF68C /* Debug */ = {
+		CE0273DB1EB5D7B200781825 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9F3FQNZGD3;
@@ -233,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		06FEFD6D1EB373B4008DF68C /* Release */ = {
+		CE0273DC1EB5D7B200781825 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9F3FQNZGD3;
@@ -245,25 +243,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06FEFD5F1EB373B4008DF68C /* Build configuration list for PBXProject "Proxy" */ = {
+		CE0273CE1EB5D7B200781825 /* Build configuration list for PBXProject "ReferenceCounting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06FEFD691EB373B4008DF68C /* Debug */,
-				06FEFD6A1EB373B4008DF68C /* Release */,
+				CE0273D81EB5D7B200781825 /* Debug */,
+				CE0273D91EB5D7B200781825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		06FEFD6B1EB373B4008DF68C /* Build configuration list for PBXNativeTarget "Proxy" */ = {
+		CE0273DA1EB5D7B200781825 /* Build configuration list for PBXNativeTarget "ReferenceCounting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06FEFD6C1EB373B4008DF68C /* Debug */,
-				06FEFD6D1EB373B4008DF68C /* Release */,
+				CE0273DB1EB5D7B200781825 /* Debug */,
+				CE0273DC1EB5D7B200781825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 06FEFD5C1EB373B4008DF68C /* Project object */;
+	rootObject = CE0273CB1EB5D7B200781825 /* Project object */;
 }

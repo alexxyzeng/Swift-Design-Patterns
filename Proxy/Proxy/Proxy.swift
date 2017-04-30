@@ -9,25 +9,55 @@
 import Foundation
 
 protocol HttpHeaderRequest {
-    func getHeader(url: String, header: String) -> String?
+	init(url: String)
+	func getHeader(header: String, callback: @escaping (String, String?) -> Void)
+	func execute()
 }
 
 class HttpHeaderRequestProxy: HttpHeaderRequest {
-    private let semaphore = DispatchSemaphore(value: 0)
-    
-    func getHeader(url: String, header: String) -> String? {
-        var headerValue: String?
-        
-        let url = URL(string: url)
-        let request = URLRequest(url: url!)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let response = response as? HTTPURLResponse {
-                headerValue = response.allHeaderFields[header] as? String
-            }
-            self.semaphore.signal()
-        }
-        
-        let _ = semaphore.wait(timeout: DispatchTime.distantFuture)
-        return headerValue
-    }
+	let url: String
+	var headersRequired: [String: (String, String?) -> Void]
+	
+	required init(url: String) {
+		self.url = url
+		self.headersRequired = Dictionary<String, (String, String?) -> Void>()
+	}
+	
+	func getHeader(header: String, callback: @escaping (String, String?) -> Void) {
+		self.headersRequired[header] = callback
+	}
+	
+	func execute() {
+		let url = URL(string: self.url)
+		let request = URLRequest(url: url!)
+		URLSession.shared.dataTask(with: request) { (data, response, error) in
+			if let response = response as? HTTPURLResponse,
+				let headers = response.allHeaderFields as? [String: String] {
+				for (header, callback) in self.headersRequired {
+					callback(header, headers[header])
+				}
+			}
+		}.resume()
+	}
+}
+
+
+class AccessControlProxy: HttpHeaderRequest {
+	private let wrappedObject: HttpHeaderRequest
+	
+	required init(url: String) {
+		wrappedObject = HttpHeaderRequestProxy(url: url)
+	}
+	
+	func getHeader(header: String, callback: @escaping (String, String?) -> Void) {
+		wrappedObject.getHeader(header: header, callback: callback)
+	}
+	
+	func execute() {
+		if UserAuthentication.sharedInstance.authenticated {
+			wrappedObject.execute()
+		} else {
+			fatalError("Unauthorized")
+		}
+	}
 }

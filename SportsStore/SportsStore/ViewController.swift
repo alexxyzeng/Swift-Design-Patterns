@@ -101,6 +101,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 						cell.stockStepper.value = Double(product.stockLevel)
 						cell.stockField.text = String(product.stockLevel)
 						productLogger.logItem(item: product)
+						
+						StockServerFactory.getStockServer().setStockLevel(product: product.name, stockLevel: product.stockLevel)
 					}
                     break;
                 }

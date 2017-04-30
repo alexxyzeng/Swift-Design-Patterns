@@ -23,4 +23,8 @@ class NetworkConnection {
 		Thread.sleep(forTimeInterval: Double(arc4random() % 2))
 		return flyweight.getStockLevel(name: name)
 	}
+	
+	func setStockLevel(name: String, level: Int) {
+		print("Stock update: \(name) = \(level)")
+	}
 }
