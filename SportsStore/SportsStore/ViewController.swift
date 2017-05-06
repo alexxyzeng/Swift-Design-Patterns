@@ -79,9 +79,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductTableCell
         cell.product = product
         cell.nameLabel.text = product.name;
-        cell.descriptionLabel.text = product.productDescription;
+        cell.descriptionLabel.text = product.category;
         cell.stockStepper.value = Double(product.stockLevel);
         cell.stockField.text = String(product.stockLevel);
+		CellFormatter.createChain().formatCell(cell: cell)
         return cell;
     }
     

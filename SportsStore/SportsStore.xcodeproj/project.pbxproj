@@ -17,6 +17,7 @@
 		CE21C4331EA393FB001225D0 /* Euro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4321EA393FB001225D0 /* Euro.swift */; };
 		CE21C4351EA3A2D2001225D0 /* StockvalueImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */; };
 		CE21C4371EA3A438001225D0 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21C4361EA3A438001225D0 /* StockValueFactories.swift */; };
+		CE27D1811EBDC3CE000EADF7 /* FormatterChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27D1801EBDC3CE000EADF7 /* FormatterChain.swift */; };
 		CE2DD1A21EA4CD940066F3D8 /* EventBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DD1A11EA4CD940066F3D8 /* EventBridge.swift */; };
 		CE2DD1A41EA506A70066F3D8 /* ProductDecorators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DD1A31EA506A70066F3D8 /* ProductDecorators.swift */; };
 		CE2DD1C61EA5EF600066F3D8 /* StockTotalFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DD1C51EA5EF600066F3D8 /* StockTotalFacade.swift */; };
@@ -55,6 +56,7 @@
 		CE21C4321EA393FB001225D0 /* Euro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euro.swift; sourceTree = "<group>"; };
 		CE21C4341EA3A2D2001225D0 /* StockvalueImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockvalueImplementations.swift; sourceTree = "<group>"; };
 		CE21C4361EA3A438001225D0 /* StockValueFactories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
+		CE27D1801EBDC3CE000EADF7 /* FormatterChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterChain.swift; sourceTree = "<group>"; };
 		CE2DD1A11EA4CD940066F3D8 /* EventBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBridge.swift; sourceTree = "<group>"; };
 		CE2DD1A31EA506A70066F3D8 /* ProductDecorators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDecorators.swift; sourceTree = "<group>"; };
 		CE2DD1C51EA5EF600066F3D8 /* StockTotalFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTotalFacade.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6636F77A19F65D24002DE278 /* AppDelegate.swift */,
+				CE27D1801EBDC3CE000EADF7 /* FormatterChain.swift */,
 				6636F77C19F65D24002DE278 /* ViewController.swift */,
 				CEBD37631E9E22A9000776D9 /* NetworkConnection.swift */,
 				CEBD37651E9E23D1000776D9 /* NetworkPool.swift */,
@@ -274,6 +277,7 @@
 				CE2DD1C61EA5EF600066F3D8 /* StockTotalFacade.swift in Sources */,
 				CE0273E01EB6223A00781825 /* Proxy.swift in Sources */,
 				CE2DD1A21EA4CD940066F3D8 /* EventBridge.swift in Sources */,
+				CE27D1811EBDC3CE000EADF7 /* FormatterChain.swift in Sources */,
 				CE21C4371EA3A438001225D0 /* StockValueFactories.swift in Sources */,
 				CEA3A81F1E1BFC9A009221F3 /* Utils.swift in Sources */,
 				CEBD37661E9E23D1000776D9 /* NetworkPool.swift in Sources */,

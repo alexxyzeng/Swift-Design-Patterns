@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE0273EE1EB6252F00781825 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0273ED1EB6252F00781825 /* main.swift */; };
+		CE27D17D1EBC81AD000EADF7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27D17C1EBC81AD000EADF7 /* Message.swift */; };
+		CE27D17F1EBC81E6000EADF7 /* Transmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27D17E1EBC81E6000EADF7 /* Transmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		CE0273EA1EB6252F00781825 /* ChainOfResponsibility */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChainOfResponsibility; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0273ED1EB6252F00781825 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CE27D17C1EBC81AD000EADF7 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../Message.swift; sourceTree = "<group>"; };
+		CE27D17E1EBC81E6000EADF7 /* Transmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transmitter.swift; path = ../Transmitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		CE0273EC1EB6252F00781825 /* ChainOfResponsibility */ = {
 			isa = PBXGroup;
 			children = (
+				CE27D17C1EBC81AD000EADF7 /* Message.swift */,
+				CE27D17E1EBC81E6000EADF7 /* Transmitter.swift */,
 				CE0273ED1EB6252F00781825 /* main.swift */,
 			);
 			path = ChainOfResponsibility;
@@ -121,7 +127,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE27D17F1EBC81E6000EADF7 /* Transmitter.swift in Sources */,
 				CE0273EE1EB6252F00781825 /* main.swift in Sources */,
+				CE27D17D1EBC81AD000EADF7 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +263,7 @@
 				CE0273F31EB6252F00781825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
