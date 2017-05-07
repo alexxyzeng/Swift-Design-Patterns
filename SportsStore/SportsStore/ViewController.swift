@@ -52,6 +52,13 @@ class ViewController: UIViewController, UITableViewDataSource {
 		productStore.callback = bridge.inputCallback
     }
 	
+	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+		if event?.subtype == UIEventSubtype.motionShake {
+			print("Shake motion detected")
+			undoManager?.undo()
+		}
+	}
+	
 	func updateStockLevel(name: String, level: Int) {
 		for cell in self.tableView.visibleCells {
 			if  let pcell = cell as? ProductTableCell {
@@ -79,7 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductTableCell
         cell.product = product
         cell.nameLabel.text = product.name;
-        cell.descriptionLabel.text = product.category;
+        cell.descriptionLabel.text = product.productDescription;
         cell.stockStepper.value = Double(product.stockLevel);
         cell.stockField.text = String(product.stockLevel);
 		CellFormatter.createChain().formatCell(cell: cell)
@@ -92,6 +99,10 @@ class ViewController: UIViewController, UITableViewDataSource {
                 currentCell = currentCell.superview!;
                 if let cell = currentCell as? ProductTableCell {
 					if let product = cell.product {
+						let dict: Dictionary = [product.name: product.stockLevel]
+						
+						undoManager?.registerUndo(withTarget: self, selector: #selector(undoStockLevel(data:)), object: dict)
+						
 						if let stepper = sender as? UIStepper {
 							product.stockLevel = Int(stepper.value)
 						} else if let textField = sender as? UITextField {
@@ -111,7 +122,21 @@ class ViewController: UIViewController, UITableViewDataSource {
             displayStockTotal();
         }
     }
-    
+	
+	func undoStockLevel(data: [String: Int]) {
+		if let productName = data.keys.first {
+			if let stockLevel = data[productName] {
+				for nproduct in productStore.products {
+					if nproduct.name == productName {
+						nproduct.stockLevel = stockLevel
+					}
+				}
+				updateStockLevel(name: productName, level: stockLevel)
+			}
+		}
+		
+	}
+	
     func displayStockTotal() {
 //        let stockTotal = products.reduce(0,
 //        combine: {(total, product) -> Int in return total + product.4});

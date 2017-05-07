@@ -17,7 +17,7 @@ class PriceDecorator: Product {
 	
 	init(product: Product) {
 		self.wrappedProduct = product
-		super.init(name: product.name, description: product.description, category: product.category, price: product.price, stockLevel: product.stockLevel)
+		super.init(name: product.name, description: product.productDescription, category: product.category, price: product.price, stockLevel: product.stockLevel)
 	}
 	
 	

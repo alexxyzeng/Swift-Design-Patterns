@@ -26,7 +26,7 @@ class CellFormatter {
 class ChessFormatter: CellFormatter {
 	override func formatCell(cell: ProductTableCell) {
 		if cell.product?.category == "Chess" {
-			cell.backgroundColor = UIColor.yellow
+			cell.backgroundColor = UIColor.lightGray
 		} else {
 			super.formatCell(cell: cell)
 		}
@@ -45,6 +45,6 @@ class WatersportsFormatter: CellFormatter {
 
 class DefaultFormatter: CellFormatter {
 	override func formatCell(cell: ProductTableCell) {
-		cell.backgroundColor = UIColor.lightGray
+		cell.backgroundColor = UIColor.yellow
 	}
 }
