@@ -8,6 +8,22 @@ class ProductTableCell : UITableViewCell {
     @IBOutlet weak var stockField: UITextField!
     
     var product: Product?;
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		NotificationCenter.default.addObserver(self, selector: #selector(handleStockLevelUpdate(notification:)), name: NSNotification.Name("stockUpdate"), object: nil)
+	}
+	
+	@objc private func handleStockLevelUpdate(notification: NSNotification) {
+		if let updatedProduct = notification.object as? Product {
+			if updatedProduct.name == self.product?.name {
+				DispatchQueue.main.async {
+					self.stockStepper.value = Double(updatedProduct.stockLevel)
+					self.stockField.text = String(updatedProduct.stockLevel)
+				}
+			}
+		}
+	}
 }
 
 
@@ -110,8 +126,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 								product.stockLevel = newValue
 							}
 						}
-						cell.stockStepper.value = Double(product.stockLevel)
-						cell.stockField.text = String(product.stockLevel)
+//						cell.stockStepper.value = Double(product.stockLevel)
+//						cell.stockField.text = String(product.stockLevel)
 						productLogger.logItem(item: product)
 						
 						StockServerFactory.getStockServer().setStockLevel(product: product.name, stockLevel: product.stockLevel)
