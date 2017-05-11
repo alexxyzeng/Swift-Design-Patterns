@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE95B7261EC1549700427045"
+               BlueprintIdentifier = "CE78D2E01EC4A2B4002D523D"
                BuildableName = "Memento"
                BlueprintName = "Memento"
                ReferencedContainer = "container:Memento.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE95B7261EC1549700427045"
+            BlueprintIdentifier = "CE78D2E01EC4A2B4002D523D"
             BuildableName = "Memento"
             BlueprintName = "Memento"
             ReferencedContainer = "container:Memento.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE95B7261EC1549700427045"
+            BlueprintIdentifier = "CE78D2E01EC4A2B4002D523D"
             BuildableName = "Memento"
             BlueprintName = "Memento"
             ReferencedContainer = "container:Memento.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE95B7261EC1549700427045"
+            BlueprintIdentifier = "CE78D2E01EC4A2B4002D523D"
             BuildableName = "Memento"
             BlueprintName = "Memento"
             ReferencedContainer = "container:Memento.xcodeproj">
