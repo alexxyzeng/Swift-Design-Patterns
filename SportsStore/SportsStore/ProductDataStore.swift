@@ -19,6 +19,10 @@ final class ProductDataStore {
 		uiQ = DispatchQueue.main
 	}
 	
+	func resetState() {
+		self.products = loadData()
+	}
+	
 	private func loadData() -> [Product] {
 		var products = [Product]()
 		for p in productData {

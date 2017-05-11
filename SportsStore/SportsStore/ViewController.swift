@@ -115,9 +115,10 @@ class ViewController: UIViewController, UITableViewDataSource {
                 currentCell = currentCell.superview!;
                 if let cell = currentCell as? ProductTableCell {
 					if let product = cell.product {
-						let dict: Dictionary = [product.name: product.stockLevel]
+//						let dict: Dictionary = [product.name: product.stockLevel]
 						
-						undoManager?.registerUndo(withTarget: self, selector: #selector(undoStockLevel(data:)), object: dict)
+//						undoManager?.registerUndo(withTarget: self, selector: #selector(undoStockLevel(data:)), object: dict)
+						undoManager?.registerUndo(withTarget: self, selector: #selector(resetState), object: nil)
 						
 						if let stepper = sender as? UIStepper {
 							product.stockLevel = Int(stepper.value)
@@ -139,18 +140,21 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
 	
-	func undoStockLevel(data: [String: Int]) {
-		if let productName = data.keys.first {
-			if let stockLevel = data[productName] {
-				for nproduct in productStore.products {
-					if nproduct.name == productName {
-						nproduct.stockLevel = stockLevel
-					}
-				}
-				updateStockLevel(name: productName, level: stockLevel)
-			}
-		}
-		
+//	func undoStockLevel(data: [String: Int]) {
+//		if let productName = data.keys.first {
+//			if let stockLevel = data[productName] {
+//				for nproduct in productStore.products {
+//					if nproduct.name == productName {
+//						nproduct.stockLevel = stockLevel
+//					}
+//				}
+//				updateStockLevel(name: productName, level: stockLevel)
+//			}
+//		}
+//		
+//	}
+	@objc func resetState() {
+		productStore.resetState()
 	}
 	
     func displayStockTotal() {
