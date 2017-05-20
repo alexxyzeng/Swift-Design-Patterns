@@ -10,6 +10,7 @@ import Foundation
 
 final class ProductDataStore {
 	var callback: ((Product) -> Void)?
+	var testCallback: ((Product, String) -> Void)?
 	private var networkQ: DispatchQueue
 	private var uiQ: DispatchQueue
 	lazy var products: [Product] = self.loadData()
